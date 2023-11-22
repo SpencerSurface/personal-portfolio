@@ -1,13 +1,13 @@
 :root {
-    --darkblue: rgb(26, 31, 115);
-    --lightblue: rgb(94, 169, 255);
+    --darkblue: rgb(20, 24, 102);
+    --lightblue: rgb(156, 202, 255);
     --orange: rgb(234, 113, 0);
     --yelloworange: rgb(255, 191, 0);
     --yellow: rgb(255, 230, 0);
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --grey: rgb(100, 100, 100);
-    --transparentwhite: rgba(255, 255, 255, 0.5);
+    --transparentwhite: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -16,11 +16,12 @@
     list-style-type: none;
     text-decoration: none;
     font-family: sans-serif;
+    color: var(--darkblue);
 }
 
 header {
     background-color: var(--darkblue);
-    position: fixed;
+    top: 0;
     width: 100vw;
     /* Flex styling */
     display: flex;
@@ -28,6 +29,10 @@ header {
     justify-content: space-between;
     /* Center the items top-to-bottom */
     align-items: center;
+}
+
+header * {
+    color: var(--lightblue)
 }
 
 header h1 {
@@ -50,6 +55,31 @@ header nav ul li {
     margin-right: 1.5em;
 }
 
-a {
-    color: var(--lightblue)
+section {
+    margin: 2em;
+    background-color: var(--lightblue);
+    min-height: 10em;
+    /* Flex content */
+    display: flex;
+    /* Align the flexbox horizontally */
+    flex-direction: row;
+    /* Center the items left-to-right */
+    align-items: center;
+}
+
+section * {
+    padding: 0.5em;
+}
+
+section h2 {
+    height: 10em;
+    min-width: 20vi;
+    background-color: var(--darkblue);
+    color: var(--lightblue);
+    font-size: 2em;
+}
+
+section div {
+    /* width: 80%; */
+    
 }
