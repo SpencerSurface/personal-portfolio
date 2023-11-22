@@ -19,6 +19,10 @@
     color: var(--darkblue);
 }
 
+p {
+    line-height: 1.5;
+}
+
 header {
     background-color: var(--darkblue);
     top: 0;
@@ -79,7 +83,16 @@ section h2 {
     font-size: 2em;
 }
 
-section div {
-    /* width: 80%; */
-    
+footer {
+    background-color: var(--darkblue);
+    padding: 2em;
+    /* Flex content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer * {
+    color: var(--lightblue);
+    font-size: 1.5em;
 }
