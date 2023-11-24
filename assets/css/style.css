@@ -87,10 +87,11 @@ section {
     align-items: center;
     /*  */
     justify-items: flex-start;
+    /*  */
+    align-items: stretch;
 }
 
 section h2 {
-    height: 100%;
     background-color: var(--darkblue);
     color: var(--lightblue);
     font-size: 2em;
@@ -111,10 +112,6 @@ section h2 {
 
 #contact ul {
     flex: 4 0 0;
-}
-
-#primary-project {
-    height: 100%;
 }
 
 .card {
@@ -141,18 +138,17 @@ section h2 {
     flex-flow: row wrap;
     align-items: center;
     justify-items: flex-start;
+    align-items: stretch;
 }
 
 /* TODO: space correctly */
 #other-projects .card {
     flex: 1 0 0;
-    /* height: 10%;
-    width: 50%; */
 }
 
 #other-projects .card img, #other-projects .card a {
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 /* --- Footer styling --- */
