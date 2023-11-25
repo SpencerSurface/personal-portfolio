@@ -164,6 +164,20 @@ section h2 {
     aspect-ratio: 8/3;
 }
 
+#contact ul {
+    font-size: 1.5em;
+    /* Flex content */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contact ul li {
+    border-style: solid;
+    border-width: 0 0 0.15em 0;
+    border-color: var(--darkblue);
+}
+
 /* --- Footer styling --- */
 footer {
     background-color: var(--darkblue);
