@@ -79,7 +79,7 @@ section {
     display: flex;
     /* Align the flexbox horizontally */
     flex-direction: row;
-    /* Center the items up-and-down and stretch them to full width */
+    /* Center the items top-to-bottom and stretch them to full height */
     align-items: center stretch;
 }
 
@@ -101,9 +101,19 @@ section h2 {
     flex: 1 0 0;
 }
 
-#projects #primary-project, #projects #other-projects {
-    /* Have the primary projects and the other projects each take up 20% of the flex width */
-    flex: 2 0 0;
+#projects h2 {
+    /* Have the heading take up 20% of the flex width */
+    flex: 3 0 0;
+}
+
+#projects #primary-project {
+    /* Have the primary projects take up 53.3% of the flex width */
+    flex: 8 8 0;
+}
+
+#projects #other-projects {
+    /* Have the other projects take up 26.7% of the flex width */
+    flex: 4 0 0;
 }
 
 #contact ul {
@@ -114,6 +124,7 @@ section h2 {
 .card {
     /* Needed in order to position the headings absolutely relative to the cards */
     position: relative;
+    aspect-ratio: 4/3;
 }
 
 /* TODO: position title */
@@ -132,20 +143,24 @@ section h2 {
     padding: 0;
     /* Flex content */
     display: flex;
-    /* Align flexbox horizontally, with wrapping, to get a 2x2 grid */
-    flex-flow: row wrap;
-    /* Center items top-to-bottom and stretch to fit */
+    /* Align flexbox vertically to get a column */
+    flex-flow: column;
+    /* Center items left-to-right and stretch to fit */
     align-items: center stretch;
 }
 
-/* TODO: space correctly */
 #other-projects .card {
-    flex: 1 0 50%;
+    /* Get all four cards to fit in the one column */
+    height: 25%;
+    /* Match height of primary project card */
+    aspect-ratio: 8/3;
 }
 
 #other-projects .card img, #other-projects .card a {
     height: 100%;
     width: 100%;
+    /* Match height of primary project card - (both aspect ratios are needed) */
+    aspect-ratio: 8/3;
 }
 
 /* --- Footer styling --- */
