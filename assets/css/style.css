@@ -62,7 +62,7 @@ header nav ul li {
 /* --- Main content styling --- */
 main {
     /* Set correct whitespace on edges of sections, set half whitespace on top and bottom of sections */
-    padding: 1% 2% 1% 2%;
+    padding: 1%;
     /* Flex content */
     display: flex;
     /* Align the flexbox vertically */
@@ -74,7 +74,7 @@ main {
 section {
     background-color: var(--lightblue);
     /* Finish setting correct whitespace on top and bottom of sections */
-    margin: 1% 0 1% 0;
+    margin: 1%;
     /* Flex content */
     display: flex;
     /* Align the flexbox horizontally */
@@ -85,6 +85,7 @@ section {
 
 section h2 {
     background-color: var(--darkblue);
+    padding: 1%;
     color: var(--lightblue);
     font-size: 2em;
     /* Have the heading take up 20% of the flex width */
