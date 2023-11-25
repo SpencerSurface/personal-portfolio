@@ -126,6 +126,11 @@ section h2 {
     margin: 1em;
 }
 
+#about img {
+    height: 100%;
+    width: 100%;
+}
+
 .card {
     /* Needed in order to position the headings absolutely relative to the cards */
     position: relative;
@@ -166,6 +171,13 @@ section h2 {
     width: 100%;
     /* Match height of primary project card - (both aspect ratios are needed) */
     aspect-ratio: 8/3;
+}
+
+#other-projects .card img {
+    /* Crop instead of stretching */
+    object-fit: cover;
+    /* Include the top of the image in the crop */
+    object-position: top;
 }
 
 #contact ul {
