@@ -122,6 +122,10 @@ section h2 {
     flex: 4 0 0;
 }
 
+#about * p {
+    margin: 1em;
+}
+
 .card {
     /* Needed in order to position the headings absolutely relative to the cards */
     position: relative;
@@ -184,8 +188,12 @@ footer {
     padding: 2em;
     /* Flex content */
     display: flex;
+    /* Align flexbox vertically */
     flex-direction: column;
+    /* Center the items left-to-right */
     align-items: center;
+    /* Add space in between the items */
+    gap: 1em;
 }
 
 footer * {
