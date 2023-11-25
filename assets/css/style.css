@@ -66,29 +66,23 @@ header nav ul li {
 
 /* --- Main content styling --- */
 main {
-    display: block;
-    height: 150vh;
+    /* Set correct whitespace on edges of sections, set half whitespace on top and bottom of sections */
+    padding: 1% 2% 1% 2%;
     display: flex;
     flex-flow: column;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: center stretch;
 }
 
 section {
     background-color: var(--lightblue);
-    max-height: 30%;
-    min-height: 30%;
-    width: 96%;
+    /* Finish setting correct whitespace on top and bottom of sections */
+    margin: 1% 0 1% 0;
     /* Flex content */
     display: flex;
     /* Align the flexbox horizontally */
     flex-direction: row;
     /* Center the items left-to-right */
-    align-items: center;
-    /*  */
-    justify-items: flex-start;
-    /*  */
-    align-items: stretch;
+    align-items: center stretch;
 }
 
 section h2 {
@@ -115,7 +109,7 @@ section h2 {
 }
 
 .card {
-    /* Needed to position the headings absolutely relative to the cards */
+    /* Needed in order to position the headings absolutely relative to the cards */
     position: relative;
 }
 
@@ -136,14 +130,13 @@ section h2 {
     min-height: 100%;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: center stretch;
     justify-items: flex-start;
-    align-items: stretch;
 }
 
 /* TODO: space correctly */
 #other-projects .card {
-    flex: 1 0 0;
+    flex: 1 0 50%;
 }
 
 #other-projects .card img, #other-projects .card a {
