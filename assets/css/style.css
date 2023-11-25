@@ -132,20 +132,36 @@ section h2 {
 }
 
 .card {
-    /* Needed in order to position the headings absolutely relative to the cards */
+    /* Needed in order to position the captions absolutely relative to the cards */
     position: relative;
     aspect-ratio: 4/3;
 }
 
-/* TODO: position title */
-.card h3 {
+.card figcaption {
+    background-color: var(--lightblue);
+    padding: 0.5em;
+    /* Position the captions absolutely relative to the cards */
     position: absolute;
-    top: 40%;
+    top: 1em;
+    left: 1em;
+    /* Make sure the caption is in front of the image */
+    z-index: 1;
+    /* Add a shadow to help distinguish the caption from the image */
+    box-shadow: 0 0 1em var(--black);
 }
 
 #primary-project a, #primary-project img {
     height: 100%;
     width: 100%;
+}
+
+#primary-project img, #other-projects img {
+    opacity: 0.5;
+    transition: opacity 1s 0.2s;
+}
+
+#primary-project:hover img, #other-projects .card:hover img {
+    opacity: 1;
 }
 
 #other-projects {
