@@ -232,9 +232,70 @@ footer * {
 
 /* --- Responsive design --- */
 @media (max-width: 1000px) {
+    header {
+        flex-flow: column;
+        align-items: stretch;
+    }
 
+    header h1 {
+        padding: 0.2em;
+    }
+
+    header ul {
+        padding: 0.5em;
+    }
+
+    #about div {
+        flex: 2 2 0;
+    }
+
+    #about img {
+        flex: 2 2 0;
+    }
+
+    /* .card * {
+        display: none;
+    }
+
+    #projects {
+        max-height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #projects * {
+        border: solid black 1px;
+    }
+
+    #projects h2 {
+        width: 19.6%;
+        min-height: 100%;
+    }
+
+    #primary-project {
+        width: 75%;
+        max-height: 50%;
+    }
+
+    #other-projects {
+        width: 75%;
+        max-height: 50%;
+    } */
 }
 
 @media (max-width: 700px) {
+    section {
+        flex-direction: column;
+    }
 
+    #about img {
+        object-fit:contain;
+        min-height: 300px;
+        min-width: 300px;
+        padding-bottom: 1.5em;
+    }
+
+    #contact ul {
+        padding: 1em;
+    }
 }
