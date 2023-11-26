@@ -53,10 +53,11 @@ header nav ul {
 
 header nav ul li {
     font-size: 1.5em;
+    margin-right: 1.5em;
+    /* "Underline" the links */
     border-style: solid;
     border-width: 0 0 0.15em 0;
     border-color: var(--lightblue);
-    margin-right: 1.5em;
 }
 
 /* --- Main content styling --- */
@@ -92,43 +93,33 @@ section h2 {
     flex: 1 0 0;
 }
 
+/* About section styling */
 #about div {
     /* Have the about text take up 60% of the flex width */
     flex: 3 0 0;
 }
 
 #about img {
+    height: 100%;
+    width: 100%;
     /* Have the about image take up 20% of the flex width */
     flex: 1 0 0;
 }
 
-#projects h2 {
-    /* Have the heading take up 20% of the flex width */
-    flex: 3 0 0;
+#about p {
+    font-size: 1.1em;
+    margin: 1em;
 }
 
+/* Projects section styling */
 #projects #primary-project {
     /* Have the primary projects take up 53.3% of the flex width */
-    flex: 8 8 0;
+    flex: 2.667 8 0;
 }
 
 #projects #other-projects {
     /* Have the other projects take up 26.7% of the flex width */
-    flex: 4 0 0;
-}
-
-#contact ul {
-    /* Have the contact links take up 80% of the flex width */
-    flex: 4 0 0;
-}
-
-#about * p {
-    margin: 1em;
-}
-
-#about img {
-    height: 100%;
-    width: 100%;
+    flex: 1.333 0 0;
 }
 
 .card {
@@ -150,23 +141,26 @@ section h2 {
     box-shadow: 0 0 1em var(--black);
 }
 
-#primary-project a, #primary-project img {
+.card img, .card a {
+    /* Make the image take up the full height, leaving no empty space */
     height: 100%;
+    /* Make the image shrink to fit with the flex styling */
     width: 100%;
 }
 
 #primary-project img, #other-projects img {
+    /* Make the images faint (until hovered over) */
     opacity: 0.5;
     transition: opacity 1s 0.2s;
 }
 
 #primary-project:hover img, #other-projects .card:hover img {
+    /* Make the images full-color when hovered over */
     opacity: 1;
 }
 
 #other-projects {
     margin: 0;
-    padding: 0;
     /* Flex content */
     display: flex;
     /* Align flexbox vertically to get a column */
@@ -178,13 +172,11 @@ section h2 {
 #other-projects .card {
     /* Get all four cards to fit in the one column */
     height: 25%;
-    /* Match height of primary project card */
+    /* Match height of column to that of primary project card */
     aspect-ratio: 8/3;
 }
 
 #other-projects .card img, #other-projects .card a {
-    height: 100%;
-    width: 100%;
     /* Match height of primary project card - (both aspect ratios are needed) */
     aspect-ratio: 8/3;
 }
@@ -196,15 +188,24 @@ section h2 {
     object-position: top;
 }
 
+/* Contact section styling */
+#contact ul {
+    /* Have the contact links take up 80% of the flex width */
+    flex: 4 0 0;
+}
+
 #contact ul {
     font-size: 1.5em;
     /* Flex content */
     display: flex;
+    /* Include space around and between the links */
     justify-content: space-around;
+    /* Center the links top-to-bottom */
     align-items: center;
 }
 
 #contact ul li {
+    /* "Underline" the links */
     border-style: solid;
     border-width: 0 0 0.15em 0;
     border-color: var(--darkblue);
