@@ -2,13 +2,7 @@
 :root {
     --darkblue: rgb(20, 24, 102);
     --lightblue: rgb(156, 202, 255);
-    --orange: rgb(234, 113, 0);
-    --yelloworange: rgb(255, 191, 0);
-    --yellow: rgb(255, 230, 0);
-    --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
-    --grey: rgb(100, 100, 100);
-    --transparentwhite: rgba(255, 255, 255, 0.8);
 }
 
 * {
