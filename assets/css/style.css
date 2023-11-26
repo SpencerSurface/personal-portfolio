@@ -112,14 +112,21 @@ section h2 {
 }
 
 /* Projects section styling */
-#projects #primary-project {
-    /* Have the primary projects take up 53.3% of the flex width */
-    flex: 2.667 8 0;
+.card-area {
+    /* Have the div take up 80% of the flex width */
+    flex: 4 0 0;
+    /* Flex content */
+    display: flex;
 }
 
-#projects #other-projects {
-    /* Have the other projects take up 26.7% of the flex width */
-    flex: 1.333 0 0;
+.card-area #primary-project {
+    /* Have the primary projects take up 66.7% of the flex width */
+    flex: 2 0 0;
+}
+
+.card-area #other-projects {
+    /* Have the other projects take up 33.3% of the flex width */
+    flex: 1 0 0;
 }
 
 .card {
@@ -231,8 +238,10 @@ footer * {
 }
 
 /* --- Responsive design --- */
+/* Medium screen styling */
 @media (max-width: 1000px) {
     header {
+        /* Stack the heading and navbar vertically */
         flex-flow: column;
         align-items: stretch;
     }
@@ -245,6 +254,7 @@ footer * {
         padding: 0.5em;
     }
 
+    /* Give more room for the picture in the about section */
     #about div {
         flex: 2 2 0;
     }
@@ -253,46 +263,48 @@ footer * {
         flex: 2 2 0;
     }
 
-    /* .card * {
-        display: none;
-    }
-
+    /* Stack the project cards all vertically next to the heading */
     #projects {
-        max-height: 100vh;
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    #projects * {
-        border: solid black 1px;
+        flex-flow: row wrap;
     }
 
     #projects h2 {
-        width: 19.6%;
-        min-height: 100%;
+        flex: 1 0 0;
     }
 
-    #primary-project {
-        width: 75%;
-        max-height: 50%;
+    .card-area {
+        flex: 4 0 0;
+        flex-direction: column;
     }
-
-    #other-projects {
-        width: 75%;
-        max-height: 50%;
-    } */
 }
 
+/* Narrow screen styling */
 @media (max-width: 700px) {
+    /* Remove whitespace on the sides of the screen, add more whitespace vertically */
+    main {
+        padding-inline: 0;
+        padding-block: 2%;
+    }
+
     section {
+        margin-inline: 0;
+        margin-block: 2%;
+        /* Stack the heading of each section on top of its content */
         flex-direction: column;
     }
 
+    /* Re-style the image in the about section */
     #about img {
         object-fit:contain;
         min-height: 300px;
         min-width: 300px;
         padding-bottom: 1.5em;
+    }
+
+    #projects {
+        /* Stack the heading of the projects section on top of its content */
+        /* (This is necessary: although this section should be targeted by the section rule above, it isn't) */
+        flex-direction: column;
     }
 
     #contact ul {
