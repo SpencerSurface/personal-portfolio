@@ -102,6 +102,7 @@ section h2 {
 #about img {
     height: 100%;
     width: 100%;
+    align-self: center;
     /* Have the about image take up 20% of the flex width */
     flex: 1 0 0;
 }
